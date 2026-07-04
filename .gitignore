@@ -1,0 +1,35 @@
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Credentials and tokens
+credentials/credentials.json
+credentials/token.json
+!credentials/.gitkeep
+
+# Local data & logs
+logs/*.log
+!logs/.gitkeep
+data/
+!data/.gitkeep
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
