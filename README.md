@@ -2,7 +2,36 @@
 
 A production-ready, clean, modular Python application that connects to your personal Gmail account, retrieves unread emails, cleanses and processes them with Google Gemini AI, and presents structured insights in a premium Streamlit dashboard.
 
-## 🚀 Features
+## � Workflow Overview
+
+### End-to-End Processing Flow
+```mermaid
+flowchart LR
+    A[Connect Gmail Account] --> B[Fetch Emails]
+    B --> C[Clean & Parse Content]
+    C --> D[Send to Gemini AI]
+    D --> E[Generate Summary, Priority, Actions & Reply]
+    E --> F[Display in Streamlit Dashboard]
+    F --> G[Export / Voice / Gmail Labels]
+```
+
+### User Interaction Flow
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant S as Streamlit App
+    participant G as Gmail API
+    participant AI as Gemini AI
+
+    U->>S: Open dashboard
+    S->>G: Authenticate and fetch emails
+    G-->>S: Return inbox data
+    S->>AI: Analyze content
+    AI-->>S: Structured insights
+    S-->>U: Show summaries and actions
+```
+
+## �🚀 Features
 
 *   **Secure OAuth 2.0 Authentication**: Seamlessly authenticate your Gmail account with secure local token caching and token auto-refresh.
 *   **Intelligent Text Cleaning**: Strips out HTML tags, CSS styling, tracking pixel beacons, quoted reply threads, and email signatures before forwarding to AI.
